@@ -10,7 +10,10 @@
   </head>
   <body>
     <center>
-    <h3>Rock Paper Scissors</h3>
+<br>
+<br>
+
+    <p>Rock Paper Scissors</p>
     <button onclick="
       playGame('rock');
     ">Rock</button>
@@ -29,12 +32,17 @@
       score.ties = 0;
       localStorage.removeItem('score');
     ">Reset Score</button>
-
-  </center>
-
+<br>
+<br>
+<hr>
+<p> Made by Aravind!..<p>
+</center>
     <script>
-      let score = JSON.parse(localStorage.getItem('score'));
-
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0,
+        ties: 0
+      };
 
       /*
       if (!score) {
