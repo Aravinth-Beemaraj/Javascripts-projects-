@@ -1,0 +1,42 @@
+\* Simple Amazon Shipping Calculator */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Amazon shiping calculator</title>
+</head>
+<body>
+
+    <center>
+        <br>
+        <br>
+        <br>
+        <h3>Amazon Shiping Calculator</h3>
+        <input type="text" placeholder="Cost" class="Select">
+        <button onclick="
+        Calculate();"
+        >Calculate</button>
+        <p class="Totalcost"> </p>
+    </center>
+    
+
+    <script>
+        function Calculate()
+        {
+           let inputElement=document.querySelector('.Select');
+          
+           //console.log(inputElement.value);
+
+           let cost1 =Number(inputElement.value);
+           console.log(typeof cost1);
+           if(cost1 < 40)
+           {
+                cost1 = cost1 + 20;
+           }
+
+           document.querySelector('.Totalcost').innerHTML=`$: ${cost1} Ruppes`;
+        }
+    </script>
+</body>
+</html>
