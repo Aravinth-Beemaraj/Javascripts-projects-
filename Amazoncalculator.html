@@ -3,39 +3,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <title>Amazon shiping calculator</title>
+    <style>
+        .container
+        {
+            text-align: center;
+            user-select: none;
+        }
+      .Select
+      {
+        padding: 15px;
+        border: 1px solid black;
+      }
+      .head1
+      {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 30px;
+        padding: 14px;
+        cursor: pointer;
+      }
+    </style>
 </head>
 <body>
-
-    <center>
+    <div class="container">
         <br>
         <br>
         <br>
-        <h3>Amazon Shiping Calculator</h3>
-        <input type="text" placeholder="Cost" class="Select">
+        <h3>Amazon shiping calculator</h3>
+        <div class="head">
+        <input type="text" placeholder="Enter the price" class="Select"> </div><br>
         <button onclick="
-        Calculate();"
+        Calculate();" class="head1"
         >Calculate</button>
-        <p class="Totalcost"> </p>
-    </center>
-    
-
+        <p class="Totalcost"> </p></div>
     <script>
         function Calculate()
         {
            let inputElement=document.querySelector('.Select');
-          
            //console.log(inputElement.value);
-
            let cost1 =Number(inputElement.value);
            console.log(typeof cost1);
            if(cost1 < 40)
            {
-                cost1 = cost1 + 20;
+                cost1 = cost1 + 10;
            }
-
-           document.querySelector('.Totalcost').innerHTML=`$: ${cost1} Ruppes`;
+           document.querySelector('.Totalcost').innerHTML=`$: ${cost1} Ruppes Thanks for shopping...`;
         }
     </script>
 </body>
