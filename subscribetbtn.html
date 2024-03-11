@@ -1,38 +1,42 @@
+\* Youtube Subscribe button *\
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>DOM projects</title>
     <style>
+        .container
+        {
+            text-align: center;
+        }
         button
         {
             border: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 8px;
-            padding-right: 8px;
-            background-color: rgb(179, 0, 0);
-            color: antiquewhite;
-            font-weight: 400;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgb(240,240,240);
+            color: black;
+            font-weight: 650;
             border-radius: 40px;
             cursor: pointer;
         }
        .is-subscribed
        {
-        background-color: rgb(240,240,240);
-        color: black;
+        color: antiquewhite;
+        background-color: #FF1B1B;
        }
     </style>
 </head>
 <body>
     
-    <center>
+    <div class="container">
     <h3> You Tube Subscribe button..!</h3>
-
     <button onclick="
-    
       Subscribe();
     " class="Js-btn">Subscribe</button>
-    </center>
+    </div>
     <script>
 
         function Subscribe()
